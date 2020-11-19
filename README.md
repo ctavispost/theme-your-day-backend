@@ -1,2 +1,3 @@
-# PERN Backend Template 
+# PERN Backend
 > Note: Authenticated /w Passport
+
