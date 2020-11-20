@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       models.user.hasMany(models.userAct)
-    }
+    };
     validPassword(passwordTyped) {
       return bcrypt.compareSync(passwordTyped, this.password);
     };
@@ -32,7 +32,6 @@ module.exports = (sequelize, DataTypes) => {
     id: {
       type: DataTypes.INTEGER
     },
-
     email: {
       type: DataTypes.STRING,
       validate: {

@@ -5,7 +5,9 @@ const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
     class activity extends Model {
         static associate(models) {
-            models.activity.belongsTo(models.theme);
+            models.activity.belongsToMany(models.theme, {
+                through: 'themeActs'
+            });
             models.activity.hasMany(models.userAct, {
                 foreignKey: 'id'
             });

@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     class theme extends Model {
         static associate(models) {
             models.theme.hasMany(models.activity, {
-                foreignKey: 'id'
+                through: 'themeActs'
             });
         }
     }
