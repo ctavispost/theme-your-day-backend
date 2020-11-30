@@ -6,10 +6,9 @@ const index = (req, res) => {
             if(!foundThemes) return res.json({
                 message: 'No themes found in database.'
             })
-
-        res.status(200).json({ themes: foundThemes })
-    })
-        .catch(error => alert(error.message));
+            res.status(200).json({ themes: foundThemes })
+        })
+        .catch(error => res.status(500).send(error));
 }
 
 const show = (req, res) => {
@@ -21,7 +20,7 @@ const show = (req, res) => {
                 
             res.status(200).json({ Theme: foundTheme })
         })
-            .catch(error => alert(error.message));
+        .catch(error => res.status(500).send(error));
 }
 
 module.exports = {

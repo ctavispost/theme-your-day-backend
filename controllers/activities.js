@@ -6,8 +6,8 @@ const index = (req, res) => {
             if(!foundActs) return res.json({
                 message: 'No activities found in database.'
             })
-
-        res.status(200).json({ themes: foundThemes })
+            res.status(200).json({ themes: foundThemes })
+        .catch(error => res.status(500).send(error));
     })
 }
 
@@ -16,6 +16,7 @@ const create = (req, res) => {
         .then((savedGame) => {
             res.status(200).json({ activity: savedActivity })
         })
+        .catch(error => res.status(500).send(error));
 }
 
 const update = (req, res) => {
@@ -30,8 +31,8 @@ const update = (req, res) => {
             if (!updatedActivity) return res.json({
                 message: "No activity with that ID found."
             })
-        
         res.status(200).json({ activity: updatedGame })
+        .catch(error => res.status(500).send(error));
     })
 }
 
@@ -43,7 +44,7 @@ const destroy = (req, res) => {
         .then(() => {
             res.status(200)
         })
-            .catch(error => alert(error.message))
+        .catch(error => res.status(500).send(error));
 }
 
 module.exports = {

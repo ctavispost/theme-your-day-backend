@@ -29,6 +29,7 @@ const register = (req, res) => {
         res.json(newUser)
       })
     })
+    .catch(error => res.status(500).send(error));
 }
 
 const logout = (req, res) => {
