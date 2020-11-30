@@ -7,15 +7,15 @@ const index = (req, res) => {
                 message: 'No activities found in database.'
             })
 
-        res.status(200).json({ themes: foundThemes });
+        res.status(200).json({ themes: foundThemes })
     })
 }
 
 const create = (req, res) => {
-    db.activity.create(req.body).then((savedGame) => {
-        // Validations and error handling here
-        res.status(200).json({ activity: savedActivity })
-    })
+    db.activity.create(req.body)
+        .then((savedGame) => {
+            res.status(200).json({ activity: savedActivity })
+        })
 }
 
 const update = (req, res) => {
@@ -25,11 +25,12 @@ const update = (req, res) => {
     where: {
         id: req.params.id
     }
-    }).then((updatedActivity) => {
-        if (!updatedActivity) return res.json({
-            message: "No activity with that ID found."
-        })
-        // Validations and error handling here
+    })
+        .then((updatedActivity) => {
+            if (!updatedActivity) return res.json({
+                message: "No activity with that ID found."
+            })
+        
         res.status(200).json({ activity: updatedGame })
     })
 }
@@ -38,9 +39,11 @@ const update = (req, res) => {
 const destroy = (req, res) => {
     db.activity.destroy({
         where: { id: req.params.id }
-    }).then(() => {
-        res.status(200)
     })
+        .then(() => {
+            res.status(200)
+        })
+            .catch(error => alert(error.message))
 }
 
 module.exports = {
