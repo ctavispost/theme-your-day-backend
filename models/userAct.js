@@ -11,7 +11,11 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     userAct.init({
-        id: DataTypes.INTEGER,
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
         userId: DataTypes.INTEGER,
         actId: DataTypes.INTEGER
     }, {

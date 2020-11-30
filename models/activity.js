@@ -16,8 +16,9 @@ module.exports = (sequelize, DataTypes) => {
 
     activity.init({
         id: {
-            DataTypes.INTEGER,
-            primaryKey: true
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
         },
         title: DataTypes.STRING,
         description: DataTypes.STRING,

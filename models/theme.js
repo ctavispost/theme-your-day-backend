@@ -5,14 +5,18 @@ const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
     class theme extends Model {
         static associate(models) {
-            models.theme.hasMany(models.activity, {
+            models.theme.belongsToMany(models.activity, {
                 through: 'themeActs'
             });
         }
     }
 
     theme.init({
-        id: DataTypes.INTEGER,
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
         name: DataTypes.STRING,
         image: DataTypes.STRING
     }, {
