@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   themeAct.init({
+    id: DataTypes.INTEGER,
     themeId: DataTypes.INTEGER,
     actId: DataTypes.INTEGER
   }, {

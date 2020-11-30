@@ -1,5 +1,16 @@
 const db = require('../models')
 
+const index = (req, res) => {
+    db.activity.findAll()
+        .then((foundActs) => {
+            if(!foundActs) return res.json({
+                message: 'No activities found in database.'
+            })
+
+        res.status(200).json({ themes: foundThemes });
+    })
+}
+
 const create = (req, res) => {
     db.activity.create(req.body).then((savedGame) => {
         // Validations and error handling here
@@ -34,7 +45,6 @@ const destroy = (req, res) => {
 
 module.exports = {
     index,
-    show,
     create,
     update,
     destroy
