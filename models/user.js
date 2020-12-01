@@ -29,11 +29,6 @@ module.exports = (sequelize, DataTypes) => {
   };
   //changed
   user.init({
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
-  },
     email: {
       type: DataTypes.STRING,
       validate: {
