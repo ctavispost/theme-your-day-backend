@@ -1,5 +1,7 @@
 'use strict';
-const { Model } = require('sequelize');
+const {
+  Model
+} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class themeAct extends Model {
     /**
@@ -12,12 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   themeAct.init({
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
-  },
-    themeId: DataTypes.INTEGER,
+    userId: DataTypes.INTEGER,
     actId: DataTypes.INTEGER
   }, {
     sequelize,
