@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   themeAct.init({
-    userId: DataTypes.INTEGER,
-    actId: DataTypes.INTEGER
+    themeId: DataTypes.INTEGER,
+    activityId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'themeAct',

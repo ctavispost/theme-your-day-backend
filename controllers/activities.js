@@ -6,7 +6,7 @@ const index = (req, res) => {
             if(!foundActs) return res.json({
                 message: 'No activities found in database.'
             })
-            res.status(200).json({ themes: foundThemes })
+            res.status(200).json({ activity: foundActs })
         .catch(error => res.status(500).send(error));
     })
 }
@@ -15,6 +15,18 @@ const create = (req, res) => {
     db.activity.create(req.body)
         .then((savedGame) => {
             res.status(200).json({ activity: savedActivity })
+        })
+        .catch(error => res.status(500).send(error));
+}
+
+const show = (req, res) => {
+    db.activity.findByPk(req.params.id)
+        .then((foundAct) => {
+            if (!foundAct) return res.json({
+                message: 'Act with provided ID not found.'
+            })
+                
+            res.status(200).json({ activity: foundAct })
         })
         .catch(error => res.status(500).send(error));
 }
@@ -50,6 +62,7 @@ const destroy = (req, res) => {
 module.exports = {
     index,
     create,
+    show,
     update,
     destroy
 }

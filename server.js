@@ -48,8 +48,10 @@ app.use(passport.session())
 // middleware - API routes
 app.use('/api/v1/auth', routes.auth)
 app.use('/api/v1/themes', routes.themes)
-app.use('/api/v1/index', routes.index)
 app.use('/api/v1/profile', routes.profile)
+app.use('/api/v1/themeAct', routes.themeAct)
+app.use('/api/v1/activity', routes.activity)
+
 
 //test
 
