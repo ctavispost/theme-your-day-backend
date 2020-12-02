@@ -11,6 +11,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      models.activity.belongsToMany(models.theme, {
+        through: 'themeActs'
+      });
+      models.activity.hasMany(models.userAct, {
+        foreignKey: 'id'
+      });
     }
   };
   activity.init({
