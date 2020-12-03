@@ -17,7 +17,6 @@ const create = async (req, res) => {
     
     const createdActivity = await db.activity.create(req.body);
     const relationInfo = await createdActivity.addUser(req.user);
-    console.log(relationInfo);
     res.json(createdActivity);
 }
 
