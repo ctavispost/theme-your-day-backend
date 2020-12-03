@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   userAct.init({
     userId: DataTypes.INTEGER,
-    actId: DataTypes.INTEGER
+    activityId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'userAct',

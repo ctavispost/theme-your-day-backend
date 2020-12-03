@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
       models.activity.belongsToMany(models.theme, {
         through: 'themeActs'
       });
-      models.activity.hasMany(models.userAct, {
-        foreignKey: 'id'
+      models.activity.belongsToMany(models.user, {
+        through: 'userAct'
       });
     }
   };

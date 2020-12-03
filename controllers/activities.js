@@ -3,20 +3,22 @@ const db = require('../models')
 const index = (req, res) => {
     db.activity.findAll()
         .then((foundActs) => {
-            if(!foundActs) return res.json({
-                message: 'No activities found in database.'
-            })
-            res.status(200).json({ activity: foundActs })
-        .catch(error => res.status(500).send(error));
-    })
-}
-
-const create = (req, res) => {
-    db.activity.create(req.body)
-        .then((savedGame) => {
-            res.status(200).json({ activity: savedActivity })
+            if(!foundActs) {
+                return res.json({
+                    message: 'No activities found in database.'
+                });
+            }
+            res.status(200).json({ activity: foundActs });
         })
         .catch(error => res.status(500).send(error));
+}
+
+const create = async (req, res) => {
+    
+    const createdActivity = await db.activity.create(req.body);
+    const relationInfo = await createdActivity.addUser(req.user);
+    console.log(relationInfo);
+    res.json(createdActivity);
 }
 
 const show = (req, res) => {

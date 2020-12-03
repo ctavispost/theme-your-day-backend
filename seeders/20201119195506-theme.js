@@ -48,6 +48,7 @@ module.exports = {
         title: 'Travel to Alaska',
         description: 'Take a cruise beyond the wall to the frozen north, where adventure awaits.',
         image: '',
+        themeId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -55,6 +56,7 @@ module.exports = {
         title: 'Axe Throwing',
         description: 'Toss some axes at a wall–like darts, but with axes.',
         image: '',
+        themeId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -62,6 +64,7 @@ module.exports = {
         title: 'Medeival Fair',
         description: 'Visit the lords and ladies of the realm and perhaps a blacksmith.',
         image: '',
+        themeId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -69,6 +72,7 @@ module.exports = {
         title: 'Buy a Sword',
         description: 'Maybe from that blacksmith at the fair.',
         image: '',
+        themeId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -76,6 +80,7 @@ module.exports = {
         title: 'Ale!',
         description: 'Nothing finishes a day quite like a tankard of ale, though underage adventurers may partake of rootbeer without shame.',
         image: '',
+        themeId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -83,6 +88,7 @@ module.exports = {
         title: 'Quiditch',
         description: 'For those who cannot take to the sky, Muggle Quiditch is a brillian diversion, and still lets you ride a broom.',
         image: '',
+        themeId: 2,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -90,6 +96,7 @@ module.exports = {
         title: 'Science Experiment',
         description: 'I mean, Alchemy. Try an alchemy experiment',
         image: '',
+        themeId: 2,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -97,6 +104,7 @@ module.exports = {
         title: 'Visit Your Patronus',
         description: 'Take a trip to the zoo to find your patronus.',
         image: '',
+        themeId: 2,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -104,6 +112,7 @@ module.exports = {
         title: 'Hop a Flight',
         description: 'You may not be able to travel by broom, but you can definitely fly on a plane.',
         image: '',
+        themeId: 2,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -111,6 +120,7 @@ module.exports = {
         title: 'Visit the Woods',
         description: 'The woods hold wonders unknown and untold for those brave enough.',
         image: '',
+        themeId: 2,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -118,6 +128,7 @@ module.exports = {
         title: 'Travel to the Mountains',
         description: 'There are few spots so open to adventure and mystery as the mountains.',
         image: '',
+        themeId: 3,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -125,6 +136,7 @@ module.exports = {
         title: 'Take a Long Hike',
         description: 'Really, go the scenic route.',
         image: '',
+        themeId: 3,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -132,6 +144,7 @@ module.exports = {
         title: 'Visit an Active Volcano',
         description: 'Surely, there can be no better place to loose something.',
         image: '',
+        themeId: 3,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -139,6 +152,7 @@ module.exports = {
         title: 'Eat a Second Lunch',
         description: 'Stop and enjoy yourself. Every adventure needs a second lunch.',
         image: '',
+        themeId: 3,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -146,6 +160,7 @@ module.exports = {
         title: 'Plan a trip to New Zealand',
         description: 'Consider visiting its magical vistas and, of course, Hobbitton.',
         image: '',
+        themeId: 3,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -153,6 +168,7 @@ module.exports = {
         title: 'Dress a Baby in Green',
         description: 'Just like baby Yoda.',
         image: '',
+        themeId: 4,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -160,6 +176,7 @@ module.exports = {
         title: 'Build a Robot',
         description: 'Make your own little droid.',
         image: '',
+        themeId: 4,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -167,6 +184,7 @@ module.exports = {
         title: 'Challenge a Friend to a Duel',
         description: 'Lightsabers not necessary.',
         image: '',
+        themeId: 4,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -174,6 +192,7 @@ module.exports = {
         title: 'Meditate Like a Jedi',
         description: 'Let the Force guide your thoughts in quiet contemplation.',
         image: '',
+        themeId: 4,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -181,6 +200,7 @@ module.exports = {
         title: 'Hone your qi.',
         description: 'Perhaps lift an X-Wing you cannot, but you can learn to feel the Force.',
         image: '',
+        themeId: 4,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -188,6 +208,7 @@ module.exports = {
         title: 'Go to a Baseball Game',
         description: 'See the Cubs at Wrigley Field, if you can.',
         image: '',
+        themeId: 5,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -195,6 +216,7 @@ module.exports = {
         title: 'Visit an Art Museum',
         description: 'Let yourself be drawn into the paintings and artefacts around you.',
         image: '',
+        themeId: 5,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -202,6 +224,7 @@ module.exports = {
         title: 'Hang Out at a Pool',
         description: 'Go swimming. Stay alfoat.',
         image: '',
+        themeId: 5,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -209,6 +232,7 @@ module.exports = {
         title: 'Eat at a Fancy Restaurant',
         description: 'Enjoy a high class meal dressed in your favorite bomber, t-shirt, or hockey jersey.',
         image: '',
+        themeId: 5,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -216,6 +240,7 @@ module.exports = {
         title: 'March in a Parade',
         description: 'If you can ride a float, so much the better.',
         image: '',
+        themeId: 5,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -223,6 +248,7 @@ module.exports = {
         title: 'Karaoke',
         description: 'Sing your heart out: Twist and Shout.',
         image: '',
+        themeId: 5,
         createdAt: new Date(),
         updatedAt: new Date()
       },

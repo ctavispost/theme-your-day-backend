@@ -51,6 +51,8 @@ app.use('/api/v1/themes', routes.themes)
 app.use('/api/v1/profile', routes.profile)
 app.use('/api/v1/themeAct', routes.themeAct)
 app.use('/api/v1/activity', routes.activity)
+app.use('/api/v1/userAct', routes.userAct)
+
 
 
 //test
